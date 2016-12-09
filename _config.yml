@@ -1,8 +1,8 @@
-title: Yong Yuan
+title: Chen Han
 
 # 自定义post url
 permalink: /blog/:title.html
-timezone: Asia/Chongqing
+timezone: Asia/XiaMen
 
 # Overriden by GitHub Pages: https://help.github.com/articles/using-jekyll-with-pages#configuring-jekyll
 safe: true
