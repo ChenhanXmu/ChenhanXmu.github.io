@@ -1,77 +1,73 @@
 ---
 layout: default
-category: about
-title: Chen Han's homepage
-description: I am Chen Han. I will complete my Master's degree in Faculty of Science at XiaMen University of school of information sciense and engineering on July.1 2017.
+category: about-zh
+language: cn
+title: 陈晗的个人主页
+description: 欢迎来到我的个人主页，2015年7月毕业于福建农林大学计算机与信息学院，目前为厦门大学智能科学系硕士二年级学生。
 ---
 
-<section class="about-me inner" itemscope itemtype="http://data-vocabulary.org/Person">
-  <div class="pull-right speak-french"></div>
-
+<section class="about-me inner">
   <h1>
     <div class="book-me">
-      <a class="btn btn-lg" href="/cn/">中文</a>
+      <!--<a class="btn btn-lg" href="/contact">联系我</a>-->
+      <a class="btn btn-lg" href="/cn/">English</a>
     </div>
-    <span class="hello">
-      <em>Working</em>
-      <small>makes life better.
-    </span>
+    <span class="hello">既往不恋，纵情向前</span>
   </h1>
 
   <blockquote>
   <p>
-    Cease to struggle and you cease to live.
+    潜心技术，沉淀思想，知行合一.
   </p>
   </blockquote>
-
   <p>
-    I am <a href="/"><span itemprop="name">Chen Han</span></a>, a postgraduate in Xiamen University. I graduated my Bachelor's degree in <a href="http://www.fafu.edu.cn/"><strong>Fujian Agriculture and Forestry Universty of software engineering</strong></a> on july 1, 2015 and bachelor's degree in Faculty of Science at <a href="http://www.xmu.edu.cn/">Xiamen University</a> of school of information sciense and engineering on July 1，2017.
+    这是<a href="/"><span itemprop="name">陈晗</span></a>的个人主页，目为厦门大学智能科学系硕士二年级学生。2015年7月从福建农林大学计算机与信息学院完成本科学业，希望结识更多同道中人。
   </p>
-
   <p>
-    My work interests cover <strong>Computer vision</strong>, <strong>Machine Learning</strong>, <strong>Image-based Relocalization</strong>,<strong>Struct From Motion(SFM)</strong> and <strong>Simultaneous Localization and Mapping(SLAM)</strong>.
+    目前主要兴趣集中在<strong>计算机视觉、机器学习</strong>方向，平时我会关注和学习一些<strong>基于图像的姿态估计(硕士期间研究方向)、深度学习、三维重建(SFM)、即时定位与构建(SLAM)</strong>等方面的知识。
   </p>
-
   <p>
-    I'm a big fan of Linux, Python, caffe, AR. In my free time, I dive into writing blog, reading books to improve myself.
+    喜欢阅读科技方面的文章，平时喜欢读一些最新的顶会(CVPR,ECCV,ICCV)论文。敢于将最新的理论研究融入到目前的项目工程中去。当发现了一件值得做的事情之后，就会归隐若干天把其它的事撂一边。
   </p>
-
+  <!--<p>
+    常用工具 :<a>Python</a>,<a>Matlab</a>,<a href="https://github.com/willard-yuan">GitHub</a>,<a>Google Chrome</a>,
+  </p>-->
 </section>
 
 <section class="inner">
-  <div class="post-recents-in-index">
-    <strong>Recent blog posts</strong>
-  </div>
-  <blockquote>
-    <ul>
-      {% for post in site.posts limit:3 %}
-      <li class="post-list-in-index">
-      <small class="post-list-date-in-index">
-      {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+<div class="post-recents-in-index">
+<strong>最近博文</strong>
+</div>
+<blockquote>
+<ul>
+    {% for post in site.posts limit:3 %}
+    <li class="post-list-in-index">
+    <small class="post-list-date-in-index">
+    {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
 
-      <!-- Whitespace added for readability -->
-      {% assign d = post.date | date: "%d" %}
-      {% assign m = post.date | date: "%B" %}
+    <!-- Whitespace added for readability -->
+    {% assign d = post.date | date: "%d" %}
+    {% assign m = post.date | date: "%B" %}
 
-      {% case m %}
-      {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-      {% when 'September' %}Sept
-      {% else %}{{ post.date | date: "%b" }}
-      {% endcase %}
-      {% case d %}
-      {% when '01' or '21' or '31' %}{{ %d }}<!--st-->
-      {% when '02' or '22' %}{{ %d }}<!--nd-->
-      {% when '03' or '23' %}{{ %d }}<!--rd-->
-      {% else %}{{ %d }}<!--th-->
-      {% endcase %},
-      {{ post.date | date: "%Y" }}</small><a  href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </blockquote>
+    {% case m %}
+    {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+    {% when 'September' %}Sept
+    {% else %}{{ post.date | date: "%b" }}
+    {% endcase %}
+    {% case d %}
+    {% when '01' or '21' or '31' %}{{ %d }}st
+    {% when '02' or '22' %}{{ %d }}nd
+    {% when '03' or '23' %}{{ %d }}rd
+    {% else %}{{ %d }}th
+    {% endcase %},
+    {{ post.date | date: "%Y" }}</small><a  href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+</blockquote>
   <p>
-    If you are interested in me, you can access to my English <a href="{{ site.url }}/YongYuan_resume.pdf"><strong>resume</strong></a> for more details.
+    更多请查看我的<a href="{{ site.url }}/YongYuan_resume.pdf"><strong>简历</strong></a>，或<a href="/contact"><strong>联系我</strong></a>。
   </p>
 </section>
 
-<a href="https://github.com/willard-yuan/willard-yuan.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+  <!--<a href="https://github.com/willard-yuan/willard-yuan.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>-->
